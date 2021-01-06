@@ -42,7 +42,22 @@ namespace GUCera
 
             if (success.Value.ToString() == "1")
             {
-                Response.Write("Successful Login");
+                if(type.Value.ToString() == "1")
+                {
+                    Response.Redirect("AdminHome.aspx?id=" + id);
+                }
+                else if(type.Value.ToString() == "0")
+                {
+                    Response.Redirect("InstructorHome.aspx?id="+ id);                }
+                else
+                {
+                    Response.Redirect("StudentHome.aspx?="+ id);
+                }
+
+            }
+            else
+            {
+                Response.Write("Failed Login");
             }
 
         }
@@ -55,6 +70,11 @@ namespace GUCera
         protected void Instructorregister(object sender, EventArgs e)
         {
             Response.Redirect("iRegister.aspx");
+        }
+
+        protected void mobile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("mobileadd.aspx");
         }
     }
 }

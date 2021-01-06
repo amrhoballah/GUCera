@@ -67,12 +67,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="adminallcourses.aspx" />
+    <Content Include="AdminHome.aspx" />
+    <Content Include="adminnonaccepted.aspx" />
+    <Content Include="InstructorHome.aspx" />
     <Content Include="iRegister.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="managepromos.aspx" />
+    <Content Include="mobileadd.aspx" />
     <Content Include="sRegister.aspx" />
+    <Content Include="StudentHome.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminallcourses.aspx.cs">
+      <DependentUpon>adminallcourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminallcourses.aspx.designer.cs">
+      <DependentUpon>adminallcourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminnonaccepted.aspx.cs">
+      <DependentUpon>adminnonaccepted.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminnonaccepted.aspx.designer.cs">
+      <DependentUpon>adminnonaccepted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InstructorHome.aspx.cs">
+      <DependentUpon>InstructorHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InstructorHome.aspx.designer.cs">
+      <DependentUpon>InstructorHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="iRegister.aspx.cs">
       <DependentUpon>iRegister.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -87,6 +122,20 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="managepromos.aspx.cs">
+      <DependentUpon>managepromos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="managepromos.aspx.designer.cs">
+      <DependentUpon>managepromos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mobileadd.aspx.cs">
+      <DependentUpon>mobileadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobileadd.aspx.designer.cs">
+      <DependentUpon>mobileadd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sRegister.aspx.cs">
       <DependentUpon>sRegister.aspx</DependentUpon>
@@ -94,6 +143,13 @@
     </Compile>
     <Compile Include="sRegister.aspx.designer.cs">
       <DependentUpon>sRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHome.aspx.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentHome.aspx.designer.cs">
+      <DependentUpon>StudentHome.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -25,6 +25,9 @@
             <asp:Button ID="studentregister" runat="server" OnClick="Studentregister" Text="Student Register" />
 &nbsp;&nbsp;
             <asp:Button ID="instructorregister" runat="server" OnClick="Instructorregister" Text="Instructor Register" />
+            <br />
+            <br />
+            <asp:Button ID="mobile" runat="server" OnClick="mobile_Click" Text="Add Mobile Number" />
         </div>
     </form>
 </body>
