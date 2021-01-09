@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="managepromos.aspx.cs" Inherits="GUCera.managepromos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="createpromos.aspx.cs" Inherits="GUCera.managepromos" %>
 
 <!DOCTYPE html>
 
@@ -14,10 +14,10 @@
             <br />
             <asp:Label ID="Label2" runat="server" Text="Code"></asp:Label>
             <br />
-            <asp:TextBox ID="promocode" runat="server"></asp:TextBox>
+            <asp:TextBox ID="promocode" runat="server" required="required" MaxLength="6"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Issue Date"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Issue Date" required="required"></asp:Label>
             <br />
             <asp:Calendar ID="issue" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
@@ -31,7 +31,7 @@
             </asp:Calendar>
             <br />
             <br />
-            <asp:Label ID="Label4" runat="server" Text="Expiry Date"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Expiry Date" required="required"></asp:Label>
             <br />
             <asp:Calendar ID="expiry" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
@@ -45,7 +45,7 @@
             </asp:Calendar>
             <br />
             <br />
-            <asp:Label ID="Label5" runat="server" Text="Discount"></asp:Label>
+            <asp:Label ID="Label5" runat="server" Text="Discount" required="required"></asp:Label>
             <br />
             <asp:TextBox ID="discount" runat="server"></asp:TextBox>
             <br />
@@ -53,31 +53,9 @@
             <asp:Button ID="create" runat="server" Text="Create" OnClick="create_Click" />
             <br />
             <br />
-
-            <asp:Label ID="Label6" runat="server" Text="Issue Promocode"></asp:Label>
-
-            <br />
-
-            <br />
-            <asp:Label ID="Label7" runat="server" Text="Student ID"></asp:Label>
-            <br />
-            <asp:TextBox ID="username" runat="server" ></asp:TextBox>
-            <br />
-            <br />
-            <asp:Label ID="Label8" runat="server" Text="Promocode"></asp:Label>
-            <br />
-            <asp:TextBox ID="issuedpromo" runat="server" ></asp:TextBox>
-            <br />
-            <br />
-            <asp:Button ID="Issuep" runat="server" Text="Issue" OnClick="Issuep_Click" />
-            <br />
-            <br />
-            <asp:Label ID="Label9" runat="server" Text="All Students"></asp:Label>
-
-            <br />
-
-            <br />
         </div>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
+
     </form>
 </body>
 </html>

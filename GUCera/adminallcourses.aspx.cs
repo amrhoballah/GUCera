@@ -26,7 +26,8 @@ namespace GUCera
             
             while(rdr.Read())
             {
-                String dataLine = rdr.GetString(rdr.GetOrdinal("name"));
+                int id = rdr.GetInt32(rdr.GetOrdinal("id"));
+                String name = rdr.GetString(rdr.GetOrdinal("name"));
                 int credit = rdr.GetInt32(rdr.GetOrdinal("creditHours"));
                 double price = (double) rdr.GetDecimal(rdr.GetOrdinal("price"));
                 String content;
@@ -49,13 +50,33 @@ namespace GUCera
                 }
                     
 
-                dataLine += " " + credit + " " + price+" "+content+ " " + accepted;
-
-                Label data = new Label();
-                data.Text = dataLine;
-                form1.Controls.Add(data);
-                form1.Controls.Add(new LiteralControl("<br />"));
+                TableRow row = new TableRow();
+                TableCell data1 = new TableCell();
+                TableCell data2 = new TableCell();
+                TableCell data3 = new TableCell();
+                TableCell data4 = new TableCell();
+                TableCell data5 = new TableCell();
+                TableCell data6 = new TableCell();
+                data1.Text = ""+ id;
+                data2.Text = name;
+                data3.Text = ""+credit;
+                data4.Text = ""+price;
+                data5.Text = content;
+                data6.Text = ""+accepted;
+                row.Cells.Add(data1);
+                row.Cells.Add(data2);
+                row.Cells.Add(data3);
+                row.Cells.Add(data4);
+                row.Cells.Add(data5);
+                row.Cells.Add(data6);
+                table2.Controls.Add(row);
             }
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            int id = Int16.Parse(Request.QueryString["id"]);
+            Response.Redirect("AdminHome.aspx?id=" + id);
         }
     }
 }

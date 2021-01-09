@@ -14,7 +14,15 @@ namespace GUCera
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                int registered = Int16.Parse(Request.QueryString["id"]);
+                Response.Write("Your regsitered successfully with ID: " + registered);
+            }
+            catch(Exception ex)
+            {
+                
+            }
         }
 
         protected void login(object sender, EventArgs e)
@@ -35,29 +43,43 @@ namespace GUCera
 
             success.Direction = ParameterDirection.Output;
             type.Direction = ParameterDirection.Output;
-
-            conn.Open();
-            loginproc.ExecuteNonQuery();
-            conn.Close();
-
-            if (success.Value.ToString() == "1")
+            try
             {
-                if(type.Value.ToString() == "1")
+                conn.Open();
+                loginproc.ExecuteNonQuery();
+
+
+                if (success.Value.ToString() == "1")
                 {
-                    Response.Redirect("AdminHome.aspx?id=" + id);
+                    if (type.Value.ToString() == "1")
+                    {
+                        Response.Redirect("AdminHome.aspx?id=" + id);
+                    }
+                    else if (type.Value.ToString() == "0")
+                    {
+                        Response.Redirect("InstructorHome.aspx?id=" + id);
+                    }
+                    else
+                    {
+                        Response.Redirect("StudentHome.aspx?id=" + id);
+                    }
+
                 }
-                else if(type.Value.ToString() == "0")
-                {
-                    Response.Redirect("InstructorHome.aspx?id="+ id);                }
                 else
                 {
-                    Response.Redirect("StudentHome.aspx?="+ id);
+                    Response.Write("Failed Login");
                 }
-
             }
-            else
+            catch(SqlException ex)
             {
-                Response.Write("Failed Login");
+                Response.Write("Error: "+ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+                username.Text = default;
+                password.Text = default;
+
             }
 
         }
@@ -75,6 +97,17 @@ namespace GUCera
         protected void mobile_Click(object sender, EventArgs e)
         {
             Response.Redirect("mobileadd.aspx");
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("sRegister.aspx");
+        }
+
+        protected void LinkButton2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("iRegister.aspx");
+
         }
     }
 }

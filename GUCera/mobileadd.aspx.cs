@@ -23,7 +23,7 @@ namespace GUCera
 
             SqlConnection conn = new SqlConnection(connStr);
 
-            int id = Int16.Parse(username.Text);
+            int id = Int16.Parse(Request.QueryString["id"]);
             String phone = number.Text;
 
             SqlCommand mobileproc = new SqlCommand("addMobile", conn);
@@ -32,9 +32,37 @@ namespace GUCera
             mobileproc.Parameters.Add(new SqlParameter("@mobile_number", phone));
 
             conn.Open();
-            mobileproc.ExecuteNonQuery();
-            conn.Close();
-            Response.Redirect("Login.aspx");
+            try
+            {
+                mobileproc.ExecuteNonQuery();
+                Response.Write("Number added successfully");
+            }
+            catch (SqlException ex)
+            {
+                Response.Write("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+                number.Text = default;
+            }
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            int id = Int16.Parse(Request.QueryString["id"]);
+            if (Request.QueryString["src"] == "1")
+            {
+                Response.Redirect("AdminHome.aspx?id=" + id);
+            }
+            else if (Request.QueryString["src"] == "0")
+            {
+                Response.Redirect("InstructorHome.aspx?id=" + id);
+            }
+            else
+            {
+                Response.Redirect("StudentHome.aspx?id=" + id);
+            }
         }
     }
 }

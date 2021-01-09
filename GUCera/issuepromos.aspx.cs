@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace GUCera
 {
-    public partial class adminnonaccepted : System.Web.UI.Page
+    public partial class issuepromos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,79 +18,65 @@ namespace GUCera
 
             SqlConnection conn = new SqlConnection(connStr);
 
-            SqlCommand viewproc = new SqlCommand("AdminViewNonAcceptedCourses", conn);
+            SqlCommand viewproc = new SqlCommand("AdminListAllStudents", conn);
             viewproc.CommandType = CommandType.StoredProcedure;
 
             conn.Open();
             SqlDataReader rdr = viewproc.ExecuteReader(CommandBehavior.CloseConnection);
-
             while (rdr.Read())
             {
                 int id = rdr.GetInt32(rdr.GetOrdinal("id"));
-                String name = rdr.GetString(rdr.GetOrdinal("name"));
-                int credit = rdr.GetInt32(rdr.GetOrdinal("creditHours"));
-                double price = (double)rdr.GetDecimal(rdr.GetOrdinal("price"));
-                String content;
-                if (rdr.IsDBNull(rdr.GetOrdinal("content")))
-                {
-                    content = "NoContent";
-                }
-                else
-                {
-                    content = rdr.GetString(rdr.GetOrdinal("content"));
-                }
+
+                String dataLine = rdr.GetString(rdr.GetOrdinal("firstName"));
+                String last = rdr.GetString(rdr.GetOrdinal("lastName"));
 
 
                 TableRow row = new TableRow();
                 TableCell data1 = new TableCell();
                 TableCell data2 = new TableCell();
                 TableCell data3 = new TableCell();
-                TableCell data4 = new TableCell();
-                TableCell data5 = new TableCell();
                 data1.Text = "" + id;
-                data2.Text = name;
-                data3.Text = "" + credit;
-                data4.Text = "" + price;
-                data5.Text = content;
+                data2.Text = dataLine;
+                data3.Text = "" + last;
                 row.Cells.Add(data1);
                 row.Cells.Add(data2);
                 row.Cells.Add(data3);
-                row.Cells.Add(data4);
-                row.Cells.Add(data5);
                 table2.Controls.Add(row);
             }
+
         }
 
-        protected void Accept_Click(object sender, EventArgs e)
+        protected void Issuep_Click(object sender, EventArgs e)
         {
-            int id = Int16.Parse(Request.QueryString["id"]);
-            int course = Int16.Parse(courseid.Text);
+            int sid = Int16.Parse(username.Text);
+            String code = issuedpromo.Text;
 
             string connStr = WebConfigurationManager.ConnectionStrings["GUCera"].ToString();
 
             SqlConnection conn = new SqlConnection(connStr);
 
-            SqlCommand acceptproc = new SqlCommand("AdminAcceptRejectCourse", conn);
-            acceptproc.CommandType = CommandType.StoredProcedure;
+            SqlCommand issueproc = new SqlCommand("AdminIssuePromocodeToStudent", conn);
+            issueproc.CommandType = CommandType.StoredProcedure;
 
-            acceptproc.Parameters.Add(new SqlParameter("@adminid", id));
-            acceptproc.Parameters.Add(new SqlParameter("@courseId", course));
-
+            issueproc.Parameters.Add(new SqlParameter("@sid", sid));
+            issueproc.Parameters.Add(new SqlParameter("@pid", code));
+            int id = Int16.Parse(Request.QueryString["id"]);
             conn.Open();
             try
             {
-                acceptproc.ExecuteNonQuery();
-                Response.Redirect("adminnonaccepted.aspx?id=" + id);
-                
+                issueproc.ExecuteNonQuery();
+                conn.Close();
+                Response.Write("Promocode issued successfully");
             }
             catch (SqlException ex)
             {
+                conn.Close();
                 Response.Write("Error: " + ex.Message);
             }
             finally
             {
-                conn.Close();
-                courseid.Text = "";
+                username.Text = "";
+                issuedpromo.Text = "";
             }
         }
 

@@ -9,18 +9,17 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
-            <br />
-            <asp:TextBox ID="username" runat="server"></asp:TextBox>
-            <br />
+            Add Mobile Number<br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="Mobile Number"></asp:Label>
             <br />
-            <asp:TextBox ID="number" runat="server"></asp:TextBox>
+            <asp:TextBox ID="number" runat="server" required="required" MaxLength="11" MinLength="11"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add" />
+            <br />
         </div>
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
     </form>
 </body>
 </html>

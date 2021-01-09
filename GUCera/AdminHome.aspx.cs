@@ -16,7 +16,8 @@ namespace GUCera
 
         protected void allcourses(object sender, EventArgs e)
         {
-            Response.Redirect("adminallcourses.aspx");
+            int id = Int16.Parse(Request.QueryString["id"]);
+            Response.Redirect("adminallcourses.aspx?id="+id);
         }
 
         protected void nonaccepted(object sender, EventArgs e)
@@ -28,7 +29,19 @@ namespace GUCera
         protected void promos(object sender, EventArgs e)
         {
             int id = Int16.Parse(Request.QueryString["id"]);
-            Response.Redirect("managepromos.aspx?id=" + id);
+            Response.Redirect("createpromos.aspx?id=" + id);
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            int id = Int16.Parse(Request.QueryString["id"]);
+            Response.Redirect("issuepromos.aspx?id=" + id);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("mobileadd.aspx?src=1&id=" + Int16.Parse(Request.QueryString["id"]));
+
         }
     }
 }

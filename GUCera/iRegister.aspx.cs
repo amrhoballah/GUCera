@@ -39,15 +39,20 @@ namespace GUCera
             ireg.Parameters.Add(new SqlParameter("@email", emailat));
             ireg.Parameters.Add(new SqlParameter("@gender", gen));
             ireg.Parameters.Add(new SqlParameter("@address", address));
-
+            SqlParameter id = ireg.Parameters.Add("@id", SqlDbType.Int);
+            id.Direction = ParameterDirection.Output;
             conn.Open();
-            ireg.ExecuteNonQuery();
-            conn.Close();
-
-            Response.Write("Successful Register");
-            Response.Redirect("Login.aspx");
-
-
+            try
+            {
+                ireg.ExecuteNonQuery();
+                conn.Close();
+                Response.Redirect("Login.aspx?id=" + id.Value.ToString()) ;
+            }
+            catch(SqlException ex)
+            {
+                conn.Close();
+                Response.Write("Error: " + ex.Message);
+            }
         }
     }
 }

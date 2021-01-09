@@ -4,17 +4,38 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>All Courses</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Name"></asp:Label>
-&nbsp;<asp:Label ID="Label2" runat="server" Text="Credit Hours"></asp:Label>
-&nbsp;<asp:Label ID="Label3" runat="server" Text="Price"></asp:Label>
-&nbsp;<asp:Label ID="Label4" runat="server" Text="Content"></asp:Label>
-&nbsp;<asp:Label ID="Label5" runat="server" Text="Accepted"></asp:Label>
+            All Courses<br />
+&nbsp;<asp:Table ID="table2" runat="server">
+                <asp:TableRow>
+                    <asp:TableHeaderCell>
+                        Course ID
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Name
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Credit Hours
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Price
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Content
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Accepted
+                    </asp:TableHeaderCell>
+                </asp:TableRow>
+            </asp:Table>
+            <br />
         </div>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
+
     </form>
 </body>
 </html>

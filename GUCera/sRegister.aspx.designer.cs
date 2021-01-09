@@ -141,7 +141,7 @@ namespace GUCera
         protected global::System.Web.UI.WebControls.TextBox add;
 
         /// <summary>
-        /// iregister control.
+        /// register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.

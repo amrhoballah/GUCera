@@ -12,7 +12,7 @@
             <asp:Label ID="Label1" runat="server" Text="Accept Course Form"></asp:Label>
             <br />
             <br />
-            <asp:Label ID="Label2" runat="server" Text="CourseID"></asp:Label>
+            <asp:Label ID="Label2" runat="server" Text="CourseID" required="required"></asp:Label>
             <br />
             <asp:TextBox ID="courseid" runat="server"></asp:TextBox>
             <br />
@@ -20,16 +20,30 @@
             <asp:Button ID="Accept" runat="server" Text="Accept" OnClick="Accept_Click" />
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" Text="All Non Accepted Courses"></asp:Label>
-            <br />
-            <br />
-            <asp:Label ID="Label4" runat="server" Text="Name"></asp:Label>
-            &nbsp;<asp:Label ID="Label5" runat="server" Text="Credit Hours"></asp:Label>
-&nbsp;<asp:Label ID="Label6" runat="server" Text="Price"></asp:Label>
-&nbsp;<asp:Label ID="Label7" runat="server" Text="Content"></asp:Label>
-            <br />
+
+            <asp:Table ID="table2" runat="server">
+                <asp:TableRow>
+                    <asp:TableHeaderCell>
+                        Course ID
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Name
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Credit Hours
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Price
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Content
+                    </asp:TableHeaderCell>
+                </asp:TableRow>
+            </asp:Table>
             <br />
         </div>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
+
     </form>
 </body>
 </html>

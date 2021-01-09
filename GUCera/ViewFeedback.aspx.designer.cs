@@ -11,7 +11,7 @@ namespace GUCera
 {
 
 
-    public partial class adminallcourses
+    public partial class ViewFeedback
     {
 
         /// <summary>
@@ -24,21 +24,21 @@ namespace GUCera
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// table2 control.
+        /// cid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table table2;
+        protected global::System.Web.UI.WebControls.TextBox cid;
 
         /// <summary>
-        /// LinkButton1 control.
+        /// viewf control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Button viewf;
     }
 }
