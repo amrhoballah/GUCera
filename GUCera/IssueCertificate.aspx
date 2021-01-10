@@ -31,6 +31,10 @@
             </asp:Calendar>
             <br />
             <asp:Button ID="isscer" runat="server" Text="Issue" OnClick="isscer_click" />
+                                <br />
+             <br />
+                                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
+
         </div>
     </form>
 </body>

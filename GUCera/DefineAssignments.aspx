@@ -20,7 +20,11 @@
             <br />
             <br />
             Type<br />
-            <asp:TextBox ID="type" runat="server" required="required" MaxLength="10"></asp:TextBox>
+            <asp:DropDownList ID="type1" runat="server">
+                <asp:ListItem>Project</asp:ListItem>
+                <asp:ListItem>Quiz</asp:ListItem>
+                <asp:ListItem>Exam</asp:ListItem>
+            </asp:DropDownList>
             <br />
             <br />
             Content<br />
@@ -47,6 +51,12 @@
             </asp:Calendar>
             <br />
             <asp:Button ID="defass" runat="server" Text="Define" OnClick="defass_Click" />
+
+                                            <br />
+            <br />
+
+                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
+
         </div>
     </form>
 </body>

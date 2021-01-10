@@ -26,7 +26,7 @@ namespace GUCera
 
         protected void manageass_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ManageAssignments.aspx?id=" + Int16.Parse(Request.QueryString["id"]));
+            Response.Redirect("ViewAssignmentsInstructor.aspx?id=" + Int16.Parse(Request.QueryString["id"]));
         }
 
         protected void viewfeed_Click(object sender, EventArgs e)
@@ -42,6 +42,12 @@ namespace GUCera
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("mobileadd.aspx?src=0&id=" + Int16.Parse(Request.QueryString["id"]));
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("GradeAssignments.aspx?id=" + Int16.Parse(Request.QueryString["id"]));
 
         }
     }

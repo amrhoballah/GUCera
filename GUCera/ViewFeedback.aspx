@@ -18,6 +18,24 @@
             <asp:Button ID="viewf" runat="server" Text="View" OnClick="viewf_Click" />
             <br />
             <br />
+            Feedback Found
+            <asp:Table ID="table2" runat="server">
+                <asp:TableRow>
+                    <asp:TableHeaderCell>
+                        Number
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Comments
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Likes
+                    </asp:TableHeaderCell>
+                </asp:TableRow>
+            </asp:Table>
+            <br />
+            <br />
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
+
         </div>
     </form>
 </body>

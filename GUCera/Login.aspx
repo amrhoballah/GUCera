@@ -26,7 +26,6 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Instructor Register</asp:LinkButton>
             <br />
             <br />
-            <asp:Button ID="mobile" runat="server" OnClick="mobile_Click" Text="Add Mobile Number" />
         </div>
     </form>
 </body>

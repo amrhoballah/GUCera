@@ -18,8 +18,10 @@
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add" />
             <br />
+                        <br />
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
+
         </div>
-        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
     </form>
 </body>
 </html>

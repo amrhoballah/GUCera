@@ -42,13 +42,13 @@ namespace GUCera
         protected global::System.Web.UI.WebControls.TextBox number;
 
         /// <summary>
-        /// type control.
+        /// type1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox type;
+        protected global::System.Web.UI.WebControls.DropDownList type1;
 
         /// <summary>
         /// content control.
@@ -94,5 +94,14 @@ namespace GUCera
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button defass;
+
+        /// <summary>
+        /// LinkButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }

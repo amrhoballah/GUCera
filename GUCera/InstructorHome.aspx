@@ -17,7 +17,10 @@
         <asp:Button ID="defineass" runat="server" Text="Define Assignments" OnClick="defineass_Click" />
         <br />
         <br />
-        <asp:Button ID="manageass" runat="server" Text="Manage Assignments" OnClick="manageass_Click" />
+        <asp:Button ID="manageass" runat="server" Text="View Assignments" OnClick="manageass_Click" />
+            <br />
+            <br />
+        <asp:Button ID="Button2" runat="server" Text="Grade Assignments" OnClick="Button2_Click" />
         <br />
         <br />
         <asp:Button ID="viewfeed" runat="server" Text="View Feedback" OnClick="viewfeed_Click" />

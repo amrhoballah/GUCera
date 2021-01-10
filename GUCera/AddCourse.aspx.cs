@@ -51,5 +51,11 @@ namespace GUCera
                 Response.Write("Error: " + ex.Message);
             }
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InstructorHome.aspx?id=" + Request.QueryString["id"]);
+
+        }
     }
 }

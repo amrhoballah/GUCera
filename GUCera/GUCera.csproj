@@ -72,12 +72,14 @@
     <Content Include="AdminHome.aspx" />
     <Content Include="adminnonaccepted.aspx" />
     <Content Include="DefineAssignments.aspx" />
+    <Content Include="GradeAssignments.aspx" />
     <Content Include="InstructorHome.aspx" />
     <Content Include="iRegister.aspx" />
     <Content Include="IssueCertificate.aspx" />
     <Content Include="issuepromos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="createpromos.aspx" />
+    <Content Include="ViewAssignmentsInstructor.aspx" />
     <Content Include="mobileadd.aspx" />
     <Content Include="sRegister.aspx" />
     <Content Include="StudentHome.aspx" />
@@ -120,6 +122,13 @@
     <Compile Include="DefineAssignments.aspx.designer.cs">
       <DependentUpon>DefineAssignments.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GradeAssignments.aspx.cs">
+      <DependentUpon>GradeAssignments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GradeAssignments.aspx.designer.cs">
+      <DependentUpon>GradeAssignments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InstructorHome.aspx.cs">
       <DependentUpon>InstructorHome.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +170,13 @@
     </Compile>
     <Compile Include="createpromos.aspx.designer.cs">
       <DependentUpon>createpromos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAssignmentsInstructor.aspx.cs">
+      <DependentUpon>ViewAssignmentsInstructor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAssignmentsInstructor.aspx.designer.cs">
+      <DependentUpon>ViewAssignmentsInstructor.aspx</DependentUpon>
     </Compile>
     <Compile Include="mobileadd.aspx.cs">
       <DependentUpon>mobileadd.aspx</DependentUpon>

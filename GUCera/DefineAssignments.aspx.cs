@@ -28,7 +28,7 @@ namespace GUCera
             double wei = Double.Parse(weight.Text);
             string cont = content.Text;
             string dead = deadline.SelectedDate.ToString("yyyy/MM/dd");
-            string typea = type.Text;
+            string typea = type1.SelectedValue.ToString();
             int num = Int16.Parse(number.Text);
 
             SqlCommand defAssign = new SqlCommand("DefineAssignmentOfCourseOfCertianType", conn);
@@ -54,6 +54,12 @@ namespace GUCera
                 conn.Close();
                 Response.Write("Error: " + ex.Message);
             }
+        }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InstructorHome.aspx?id=" + Request.QueryString["id"]);
+
         }
     }
 }
