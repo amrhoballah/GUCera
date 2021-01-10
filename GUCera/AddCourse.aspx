@@ -23,7 +23,7 @@
             <asp:TextBox ID="price" runat="server" required="required"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="addc" runat="server" Text="Add" OnClick="addc_Click" />
+            <asp:Button ID="addc" runat="server" Text="Add Course" OnClick="addc_Click" />
                                 <br />
             <br />
                                 <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>

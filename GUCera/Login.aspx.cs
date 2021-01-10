@@ -19,7 +19,7 @@ namespace GUCera
                 int registered = Int16.Parse(Request.QueryString["id"]);
                 Response.Write("Your regsitered successfully with ID: " + registered);
             }
-            catch(Exception ex)
+            catch (Exception)
             {
                 
             }
@@ -31,6 +31,7 @@ namespace GUCera
 
             SqlConnection conn = new SqlConnection(connStr);
 
+            
             int id = Int16.Parse(username.Text);
             String pass = password.Text;
 

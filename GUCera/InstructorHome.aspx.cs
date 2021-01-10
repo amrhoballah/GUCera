@@ -50,5 +50,10 @@ namespace GUCera
             Response.Redirect("GradeAssignments.aspx?id=" + Int16.Parse(Request.QueryString["id"]));
 
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UpdateCourse.aspx?id=" + Int16.Parse(Request.QueryString["id"]));
+        }
     }
 }

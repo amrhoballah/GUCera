@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAssignmentsInstructor.aspx.cs" Inherits="GUCera.ManageAssignments" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="studentprofile.aspx.cs" Inherits="GUCera.studentprofile" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>View Assignments</title>
+    <title></title>
     <style type="text/css">
         td,th
         {
@@ -15,38 +15,35 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            View Assignments Form<br />
+            Profile Details<br />
             <br />
-            <asp:Label ID="Label2" runat="server" Text="CourseID" ></asp:Label>
-            <br />
-            <asp:TextBox ID="courseid" runat="server" required="required"></asp:TextBox>
-            <br />
-            <br />
-            <asp:Button ID="Accept" runat="server" Text="View" OnClick="Accept_Click" />
-            <br />
-            <br />
-            All Assignments
-            <asp:Table ID="table2" runat="server">
+            <asp:Table ID="Table1" runat="server">
                 <asp:TableRow>
                     <asp:TableHeaderCell>
-                        Student-ID
+                        First Name
+                    </asp:TableHeaderCell>
+                     <asp:TableHeaderCell>
+                         Last Name
+                     </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Password
                     </asp:TableHeaderCell>
                     <asp:TableHeaderCell>
-                        Course-ID
+                        Gender
                     </asp:TableHeaderCell>
                     <asp:TableHeaderCell>
-                        Assignment-Number
+                        Email
                     </asp:TableHeaderCell>
                     <asp:TableHeaderCell>
-                        Assignment-Type
+                        Address
                     </asp:TableHeaderCell>
                     <asp:TableHeaderCell>
-                        Grade
+                        GPA
                     </asp:TableHeaderCell>
                 </asp:TableRow>
             </asp:Table>
             <br />
-            <br />
+                                <br />
                                 <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
 
         </div>

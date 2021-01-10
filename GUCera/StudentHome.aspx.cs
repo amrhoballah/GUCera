@@ -13,5 +13,20 @@ namespace GUCera
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("studentprofile.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("mobileadd.aspx?src=2&id=" + Request.QueryString["id"]);
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("availablecourses.aspx?id=" + Request.QueryString["id"]);
+        }
     }
 }

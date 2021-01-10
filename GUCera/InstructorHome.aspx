@@ -12,6 +12,9 @@
             <br />
             <br />
         <asp:Button ID="addcourse" runat="server" Text="Add Course" OnClick="addcourse_Click" />
+            <br />
+            <br />
+            <asp:Button ID="Button3" runat="server" Text="Update Course" OnClick="Button3_Click" />
         <br />
         <br />
         <asp:Button ID="defineass" runat="server" Text="Define Assignments" OnClick="defineass_Click" />

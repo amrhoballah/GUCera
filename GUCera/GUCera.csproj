@@ -71,6 +71,7 @@
     <Content Include="adminallcourses.aspx" />
     <Content Include="AdminHome.aspx" />
     <Content Include="adminnonaccepted.aspx" />
+    <Content Include="availablecourses.aspx" />
     <Content Include="DefineAssignments.aspx" />
     <Content Include="GradeAssignments.aspx" />
     <Content Include="InstructorHome.aspx" />
@@ -79,6 +80,8 @@
     <Content Include="issuepromos.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="createpromos.aspx" />
+    <Content Include="studentprofile.aspx" />
+    <Content Include="UpdateCourse.aspx" />
     <Content Include="ViewAssignmentsInstructor.aspx" />
     <Content Include="mobileadd.aspx" />
     <Content Include="sRegister.aspx" />
@@ -114,6 +117,13 @@
     </Compile>
     <Compile Include="adminnonaccepted.aspx.designer.cs">
       <DependentUpon>adminnonaccepted.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="availablecourses.aspx.cs">
+      <DependentUpon>availablecourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="availablecourses.aspx.designer.cs">
+      <DependentUpon>availablecourses.aspx</DependentUpon>
     </Compile>
     <Compile Include="DefineAssignments.aspx.cs">
       <DependentUpon>DefineAssignments.aspx</DependentUpon>
@@ -171,6 +181,20 @@
     <Compile Include="createpromos.aspx.designer.cs">
       <DependentUpon>createpromos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="studentprofile.aspx.cs">
+      <DependentUpon>studentprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="studentprofile.aspx.designer.cs">
+      <DependentUpon>studentprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCourse.aspx.cs">
+      <DependentUpon>UpdateCourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateCourse.aspx.designer.cs">
+      <DependentUpon>UpdateCourse.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewAssignmentsInstructor.aspx.cs">
       <DependentUpon>ViewAssignmentsInstructor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -210,6 +234,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\GUCera132 - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
