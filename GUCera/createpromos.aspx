@@ -17,9 +17,9 @@
             <asp:TextBox ID="promocode" runat="server" required="required" MaxLength="6"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Issue Date" required="required"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Issue Date" ></asp:Label>
             <br />
-            <asp:Calendar ID="issue" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
+            <asp:Calendar ID="issue" runat="server" BackColor="White" required="required" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                 <NextPrevStyle VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#808080" />
@@ -33,7 +33,7 @@
             <br />
             <asp:Label ID="Label4" runat="server" Text="Expiry Date" required="required"></asp:Label>
             <br />
-            <asp:Calendar ID="expiry" runat="server" BackColor="White" BorderColor="#999999" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
+            <asp:Calendar ID="expiry" runat="server" BackColor="White" BorderColor="#999999" required="required" CellPadding="4" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px">
                 <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" />
                 <NextPrevStyle VerticalAlign="Bottom" />
                 <OtherMonthDayStyle ForeColor="#808080" />
