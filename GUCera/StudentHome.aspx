@@ -20,7 +20,7 @@
             <asp:Button ID="Button4" runat="server" Text="Add Credit Card" />
             <br />
             <br />
-            <asp:Button ID="Button5" runat="server" Text="View Promocodes" />
+            <asp:Button ID="Button5" runat="server" Text="View Promocodes" OnClick="Button5_Click"/>
             <br />
             <br />
             <asp:Button ID="Button6" runat="server" Text="Add Mobile Number" OnClick="Button6_Click" />

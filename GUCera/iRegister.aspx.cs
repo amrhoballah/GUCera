@@ -46,7 +46,7 @@ namespace GUCera
             {
                 ireg.ExecuteNonQuery();
                 conn.Close();
-                Response.Redirect("Login.aspx?id=" + id.Value.ToString()) ;
+                Response.Redirect("Default.aspx?id=" + id.Value.ToString()) ;
             }
             catch(SqlException ex)
             {

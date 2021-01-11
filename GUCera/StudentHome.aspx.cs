@@ -28,5 +28,10 @@ namespace GUCera
         {
             Response.Redirect("availablecourses.aspx?id=" + Request.QueryString["id"]);
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewpromos.aspx?id=" + Request.QueryString["id"]);
+        }
     }
 }
