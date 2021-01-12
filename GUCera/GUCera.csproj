@@ -268,7 +268,9 @@
     <Content Include="AdminHome.aspx" />
     <Content Include="adminnonaccepted.aspx" />
     <Content Include="availablecourses.aspx" />
+    <Content Include="creditcards.aspx" />
     <Content Include="DefineAssignments.aspx" />
+    <Content Include="feedbackadd.aspx" />
     <Content Include="GradeAssignments.aspx" />
     <Content Include="InstructorHome.aspx" />
     <Content Include="iRegister.aspx" />
@@ -276,15 +278,19 @@
     <Content Include="issuepromos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="createpromos.aspx" />
+    <Content Include="listcert.aspx" />
     <Content Include="studentprofile.aspx" />
+    <Content Include="submitassign.aspx" />
     <Content Include="UpdateCourse.aspx" />
+    <Content Include="viewassign.aspx" />
     <Content Include="ViewAssignmentsInstructor.aspx" />
     <Content Include="mobileadd.aspx" />
     <Content Include="sRegister.aspx" />
     <Content Include="StudentHome.aspx" />
     <Content Include="ViewFeedback.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="viewgrades.aspx" />
     <Content Include="viewpromos.aspx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddCourse.aspx.cs">
@@ -322,12 +328,26 @@
     <Compile Include="availablecourses.aspx.designer.cs">
       <DependentUpon>availablecourses.aspx</DependentUpon>
     </Compile>
+    <Compile Include="creditcards.aspx.cs">
+      <DependentUpon>creditcards.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="creditcards.aspx.designer.cs">
+      <DependentUpon>creditcards.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DefineAssignments.aspx.cs">
       <DependentUpon>DefineAssignments.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DefineAssignments.aspx.designer.cs">
       <DependentUpon>DefineAssignments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="feedbackadd.aspx.cs">
+      <DependentUpon>feedbackadd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feedbackadd.aspx.designer.cs">
+      <DependentUpon>feedbackadd.aspx</DependentUpon>
     </Compile>
     <Compile Include="GradeAssignments.aspx.cs">
       <DependentUpon>GradeAssignments.aspx</DependentUpon>
@@ -378,6 +398,13 @@
     <Compile Include="createpromos.aspx.designer.cs">
       <DependentUpon>createpromos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="listcert.aspx.cs">
+      <DependentUpon>listcert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listcert.aspx.designer.cs">
+      <DependentUpon>listcert.aspx</DependentUpon>
+    </Compile>
     <Compile Include="studentprofile.aspx.cs">
       <DependentUpon>studentprofile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -385,12 +412,26 @@
     <Compile Include="studentprofile.aspx.designer.cs">
       <DependentUpon>studentprofile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="submitassign.aspx.cs">
+      <DependentUpon>submitassign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="submitassign.aspx.designer.cs">
+      <DependentUpon>submitassign.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UpdateCourse.aspx.cs">
       <DependentUpon>UpdateCourse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UpdateCourse.aspx.designer.cs">
       <DependentUpon>UpdateCourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewassign.aspx.cs">
+      <DependentUpon>viewassign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewassign.aspx.designer.cs">
+      <DependentUpon>viewassign.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewAssignmentsInstructor.aspx.cs">
       <DependentUpon>ViewAssignmentsInstructor.aspx</DependentUpon>
@@ -428,8 +469,16 @@
     <Compile Include="ViewFeedback.aspx.designer.cs">
       <DependentUpon>ViewFeedback.aspx</DependentUpon>
     </Compile>
+    <Compile Include="viewgrades.aspx.cs">
+      <DependentUpon>viewgrades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewgrades.aspx.designer.cs">
+      <DependentUpon>viewgrades.aspx</DependentUpon>
+    </Compile>
     <Compile Include="viewpromos.aspx.cs">
       <DependentUpon>viewpromos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="viewpromos.aspx.designer.cs">
       <DependentUpon>viewpromos.aspx</DependentUpon>

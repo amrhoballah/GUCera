@@ -33,5 +33,35 @@ namespace GUCera
         {
             Response.Redirect("viewpromos.aspx?id=" + Request.QueryString["id"]);
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("creditcards.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void Button7_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewassign.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("viewgrades.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("submitassign.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void Button10_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("feedbackadd.aspx?id=" + Request.QueryString["id"]);
+        }
+
+        protected void Button11_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("listcert.aspx?id=" + Request.QueryString["id"]);
+        }
     }
 }

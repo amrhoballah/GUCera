@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="viewpromos.aspx.cs" Inherits="GUCera.viewpromo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="listcert.aspx.cs" Inherits="GUCera.listcert" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>My Promocodes</title>
+    <title>Certificates</title>
     <style type="text/css">
         td,th
         {
@@ -15,22 +15,25 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            My Promocodes
+            Certificates<br />
+            <br />
+            Course ID<br />
+            <asp:TextBox ID="course" runat="server" required="required"></asp:TextBox>
             <br />
             <br />
-            <asp:Table ID="Table1" runat="server" >
+            <asp:Button ID="Button1" runat="server" Text="View" OnClick="Button1_Click" />
+            <br />
+            <br />
+            <asp:Table ID="Table1" runat="server">
                 <asp:TableRow>
                     <asp:TableHeaderCell>
-                        Code
+                        Student ID
+                    </asp:TableHeaderCell>
+                    <asp:TableHeaderCell>
+                        Course ID
                     </asp:TableHeaderCell>
                     <asp:TableHeaderCell>
                         Issue Date
-                    </asp:TableHeaderCell>
-                     <asp:TableHeaderCell>
-                        Expriy Date
-                    </asp:TableHeaderCell>
-                     <asp:TableHeaderCell>
-                        Discount
                     </asp:TableHeaderCell>
                 </asp:TableRow>
             </asp:Table>
