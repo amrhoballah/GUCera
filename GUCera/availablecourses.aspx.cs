@@ -44,26 +44,19 @@ namespace GUCera
         {
             int sid = Int16.Parse(Request.QueryString["id"]);
             int course = Int16.Parse(cid.Text);
+            int inst = Int16.Parse(iid.Text);
             string connStr = WebConfigurationManager.ConnectionStrings["GUCera"].ToString();
 
             SqlConnection conn = new SqlConnection(connStr);
 
-            SqlCommand getIn = new SqlCommand("courseInformation", conn);
-            getIn.CommandType = CommandType.StoredProcedure;
-            getIn.Parameters.Add(new SqlParameter("@id", course));
-            conn.Open();
+           
             try
             {
-                SqlDataReader rdr = getIn.ExecuteReader(CommandBehavior.CloseConnection);
-                rdr.Read();
-                int inst = rdr.GetInt32(rdr.GetOrdinal("instructorId"));
-                conn.Close();
                 SqlCommand viewproc = new SqlCommand("enrollInCourse", conn);
                 viewproc.CommandType = CommandType.StoredProcedure;
                 viewproc.Parameters.Add(new SqlParameter("@sid",sid));
                 viewproc.Parameters.Add(new SqlParameter("@cid", course));
                 viewproc.Parameters.Add(new SqlParameter("@instr", inst));
-
 
                 conn.Open();
                 viewproc.ExecuteNonQuery();
@@ -76,6 +69,7 @@ namespace GUCera
             finally
             {
                 cid.Text = default;
+                iid.Text = default;
                 conn.Close();
             }
         }

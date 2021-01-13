@@ -678,6 +678,7 @@ ON A.cid = C.id WHERE C.id = @courseId
 ELSE
 print 'not a user'
 END
+
 go
 
 CREATE PROC submitAssign

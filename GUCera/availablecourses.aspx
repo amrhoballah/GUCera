@@ -33,11 +33,14 @@
             <asp:TextBox ID="cid" runat="server" required="required"></asp:TextBox>
             <br />
             <br />
+            Instructor ID
+            <asp:TextBox ID="iid" runat="server" required="required"></asp:TextBox>
+            <br />
+            <br />
             <asp:Button ID="Button1" runat="server" Text="Enroll" OnClick="Button1_Click" />
             <br />
             <br />
-                                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
-
+            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Homepage</asp:LinkButton>
         </div>
     </form>
 </body>
