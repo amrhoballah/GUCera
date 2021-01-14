@@ -37,7 +37,6 @@ namespace GUCera
             {
                 calcProc.ExecuteNonQuery();
                 conn.Close();
-                Response.Write("Assignment defined successfully");
             }
             catch (SqlException ex)
             {
@@ -59,7 +58,7 @@ namespace GUCera
             {
                 issproc.ExecuteNonQuery();
                 conn.Close();
-                Response.Write("Assignment defined successfully");
+                Response.Write("Certificate issued successfully");
             }
             catch (SqlException ex)
             {

@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Accept Course</title>
     <style type="text/css">
         td,th
         {
@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="Accept Course Form"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Accept Course"></asp:Label>
             <br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="CourseID" required="required"></asp:Label>

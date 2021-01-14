@@ -4,13 +4,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Grade Assignment</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
 
-            Grade Assignments<br />
+            Grade Assignment<br />
             <br />
             Student ID<br />
             <asp:TextBox ID="student" runat="server" required="required"></asp:TextBox>
@@ -25,11 +25,12 @@
             <br />
             <br />
             Assignment Type<br />
-            <asp:DropDownList ID="type" runat="server" required="required">
-                <asp:ListItem>Project</asp:ListItem>
-                <asp:ListItem>Quiz</asp:ListItem>
-                <asp:ListItem>Exam</asp:ListItem>
-            </asp:DropDownList>
+            <asp:ListBox ID="type1" runat="server">
+                <asp:ListItem Value="project">Project</asp:ListItem>
+                <asp:ListItem Value="quiz">Quiz</asp:ListItem>
+                <asp:ListItem Value="exam">Exam</asp:ListItem>
+            </asp:ListBox>
+            
             <br />
             <br />
             Grade<br />

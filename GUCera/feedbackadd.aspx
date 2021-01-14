@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Add Feedack</title>
 </head>
 <body>
     <form id="form1" runat="server">
-        Feedback Form<br />
+        Add Feedback<br />
         <br />
         Course ID<br />
         <asp:TextBox ID="course" runat="server" required="required"></asp:TextBox>

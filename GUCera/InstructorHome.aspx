@@ -4,11 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Instructor Homepage</title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div><asp:Label ID="Label1" runat="server" Text="Instructor Home Page"></asp:Label>
+        <div><asp:Label ID="Label1" runat="server" Text="Instructor Homepage"></asp:Label>
             <br />
             <br />
         <asp:Button ID="addcourse" runat="server" Text="Add Course" OnClick="addcourse_Click" />

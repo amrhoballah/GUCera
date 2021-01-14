@@ -1,5 +1,4 @@
-﻿
-create Database GUCera
+﻿create Database GUCera
 
 Go
 
@@ -695,23 +694,17 @@ print 'not enrolled in course'
 END
 GO
 --View the grades of each assignment type.
-CREATE PROC viewAssignGrades
+create PROC viewAssignGrades
 @assignnumber int,
 @assignType VARCHAR(10),
 @cid INT,
 @sid INT,
 @assignGrade INT OUTPUT
 AS
-IF(EXISTS(SELECT * FROM StudentTakeAssignment STC INNER JOIN Course C 
-ON STC.cid = C.id INNER JOIN Assignment A ON STC.assignmentNumber = A.number 
-WHERE STC.cid = @cid AND STC.sid = @sid AND C.id = @cid AND A.[type] = @assignType ))
 
-SELECT @assignGrade = STC.grade FROM StudentTakeAssignment STC  INNER JOIN Course C 
-ON STC.cid = C.id INNER JOIN Assignment A ON STC.assignmentNumber = A.number 
-WHERE STC.cid = @cid AND STC.sid = @sid AND C.id = @cid AND A.[type] = @assignType 
-and A.number=@assignnumber
-ELSE
-print 'user does not take course'
+SELECT @assignGrade = STC.grade FROM StudentTakeAssignment STC
+WHERE STC.cid = @cid AND STC.sid = @sid AND STC.cid = @cid AND STC.assignmenttype = @assignType and STC.assignmentNumber = @assignnumber
+
 GO
 
 --I can add feedback for the course I am enrolled in.

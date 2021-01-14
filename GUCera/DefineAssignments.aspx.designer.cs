@@ -48,7 +48,7 @@ namespace GUCera
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList type1;
+        protected global::System.Web.UI.WebControls.ListBox type1;
 
         /// <summary>
         /// content control.

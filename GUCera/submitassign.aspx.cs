@@ -26,7 +26,7 @@ namespace GUCera
             int id = Int16.Parse(Request.QueryString["id"]);
             int cid = Int16.Parse(course.Text);
             int num = Int16.Parse(number.Text);
-            string atype = type.SelectedValue.ToString();
+            string atype = type1.SelectedValue.ToString();
 
 
 
@@ -53,7 +53,7 @@ namespace GUCera
                 conn.Close();
                 course.Text = default;
                 number.Text = default;
-                type.SelectedValue = default;
+                type1.SelectedValue = default;
             }
         }
         protected void LinkButton1_Click(object sender, EventArgs e)

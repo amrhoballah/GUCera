@@ -27,7 +27,7 @@ namespace GUCera
             int sid = Int16.Parse(student.Text);
             int cid = Int16.Parse(course.Text);
             int num = Int16.Parse(number.Text);
-            string atype = type.SelectedValue.ToString();
+            string atype = type1.SelectedValue.ToString();
             double mark = Double.Parse(grade.Text);
 
 

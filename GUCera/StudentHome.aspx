@@ -4,12 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Student Homepage</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            Student Home<br />
+            Student Homepage<br />
             <br />
             <asp:Button ID="Button1" runat="server" Text="View My Profile" OnClick="Button1_Click" />
             <br />

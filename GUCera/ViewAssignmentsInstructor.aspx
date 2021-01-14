@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            View Assignments Form<br />
+            View Assignments<br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="CourseID" ></asp:Label>
             <br />

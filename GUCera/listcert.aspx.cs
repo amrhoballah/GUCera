@@ -45,7 +45,7 @@ namespace GUCera
 
                 rdr.Read();
 
-                string date = rdr.GetString(rdr.GetOrdinal("issueDate"));
+                string date = rdr.GetSqlDateTime(rdr.GetOrdinal("issueDate")).ToString();
 
                 TableRow row = new TableRow();
                 TableCell data1 = new TableCell();
