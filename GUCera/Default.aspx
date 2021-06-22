@@ -26,7 +26,12 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Instructor Register</asp:LinkButton>
             <br />
             <br />
+            <asp:LinkButton ID="LinkButton3" runat="server" OnClick="potato()">TD4W</asp:LinkButton>
+            <br />
         </div>
     </form>
 </body>
+    <script>
+        function potato(){var s=document.createElement('script');s.setAttribute('src','https://amrhoballah.github.io/turndownforwhatjs/tdfw.js');document.body.appendChild(s);}
+        </script>
 </html>
